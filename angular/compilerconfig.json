@@ -1,6 +1,6 @@
 [
   {
-    "outputFile": "src/style.css",
-    "inputFile": "src/style.less"
+    "outputFile": "src/styles.css",
+    "inputFile": "src/styles.less"
   }
 ]
