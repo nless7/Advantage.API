@@ -29,3 +29,30 @@ a:hover {
 .section-container {
   padding: 30px;
 }
+#sidebar {
+  height: 100vh;
+  padding-top: 80px;
+  position: fixed;
+  background-color: #191F26;
+}
+#dashboard {
+  margin-top: 60px;
+}
+#navbar {
+  background-color: #161A1E !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 3px 6px rgba(0, 0, 0, 0.3);
+}
+#navbar .logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+#navbar .logo.logo-left {
+  background-color: #ff6b6b;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+#navbar .logo.logo-right {
+  padding: 3px 8px;
+  border-radius: 4px;
+}
