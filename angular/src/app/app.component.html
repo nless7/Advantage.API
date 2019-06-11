@@ -1,18 +1,18 @@
 <app-navbar
-            id="navbar"
-            class="navbar navbar-dark fixed-top bg-dark">
+    id="navbar"
+    class="navbar navbar-dark fixed-top bg-dark">
 </app-navbar>
 
 <div class="container-fluid">
   <div class="row" id="mainContent">
 
     <app-sidebar
-                 id="sidebar"
-                 class="col-sm-3 col-sm-2 d-none d-sm-block sidebar">
+        id="sidebar"
+        class="col-sm-2 d-none d-sm-block sidebar">
     </app-sidebar>
 
-    <div class="col-sm-9" id="dashboard">
-      <!--Main content goes here.-->
+    <div class="col-sm-10 ml-sm-auto pt-3" id="dashboard">
+      <router-outlet></router-outlet>
     </div>
 
   </div>
