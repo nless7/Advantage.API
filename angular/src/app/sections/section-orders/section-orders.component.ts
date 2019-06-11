@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionOrdersComponent implements OnInit {
 
+  //Todo: Create section orders.
+
   constructor() { }
 
   ngOnInit() {
