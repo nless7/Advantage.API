@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <None Remove="angular\src\routes.ts" />
+    <None Remove="angular\src\shared\AppConsts.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,6 +48,7 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="angular\src\routes.ts" />
+    <TypeScriptCompile Include="angular\src\shared\AppConsts.ts" />
   </ItemGroup>
 
 </Project>
