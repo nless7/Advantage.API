@@ -1,3 +1,8 @@
-<p>
-  pie-chart works!
-</p>
+<div class="chart">
+  <canvas baseChart
+          [data]="pieChartData"
+          [colors]="colours"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType">
+  </canvas>
+</div>
