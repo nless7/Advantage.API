@@ -21,6 +21,7 @@
     <None Remove="angular\src\shared\AppConsts.ts" />
     <None Remove="angular\src\shared\Models\customer.ts" />
     <None Remove="angular\src\shared\Models\order.ts" />
+    <None Remove="angular\src\shared\Models\server.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -53,6 +54,7 @@
     <TypeScriptCompile Include="angular\src\shared\AppConsts.ts" />
     <TypeScriptCompile Include="angular\src\shared\Models\customer.ts" />
     <TypeScriptCompile Include="angular\src\shared\Models\order.ts" />
+    <TypeScriptCompile Include="angular\src\shared\Models\server.ts" />
   </ItemGroup>
 
 </Project>
