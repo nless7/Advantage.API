@@ -21,7 +21,10 @@
     <None Remove="angular\src\shared\AppConsts.ts" />
     <None Remove="angular\src\shared\Models\customer.ts" />
     <None Remove="angular\src\shared\Models\order.ts" />
+    <None Remove="angular\src\shared\Models\server-message.ts" />
     <None Remove="angular\src\shared\Models\server.ts" />
+    <None Remove="angular\src\shared\Service\order.service.ts" />
+    <None Remove="angular\src\shared\Service\server-service.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,7 +57,10 @@
     <TypeScriptCompile Include="angular\src\shared\AppConsts.ts" />
     <TypeScriptCompile Include="angular\src\shared\Models\customer.ts" />
     <TypeScriptCompile Include="angular\src\shared\Models\order.ts" />
+    <TypeScriptCompile Include="angular\src\shared\Models\server-message.ts" />
     <TypeScriptCompile Include="angular\src\shared\Models\server.ts" />
+    <TypeScriptCompile Include="angular\src\shared\Service\order.service.ts" />
+    <TypeScriptCompile Include="angular\src\shared\Service\server-service.ts" />
   </ItemGroup>
 
 </Project>

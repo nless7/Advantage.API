@@ -16,10 +16,18 @@
         <td>{{order.id}}</td>
         <td>{{order.customer.firstName}} {{order.customer.lastName}}</td>
         <td>{{order.total}}</td>
-        <td>{{order.placed | date: 'dd/MM/yyyy'}}</td>
-        <td>{{order.completed | date: 'dd/MM/yyyy'}}</td>
+        <td>{{order.placed}}</td>
+        <td>{{order.completed}}</td>
         <td>Status</td>
       </tr>
     </tbody>
   </table>
+  <app-pagination
+    (goPrev)="goToPrevious()"
+    (goNext)="goToNext()"
+    (goPage)="goToPage($event)"
+    [page]="page"
+    [perPage]="limit"
+    [count]="total">
+  </app-pagination>
 </div>

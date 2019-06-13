@@ -65,9 +65,9 @@ namespace Advantage.API.Controllers
         /// <param name="pageIndex">The page index.</param>
         /// <param name="pageSize">The page size.</param>
         /// <returns>The orders.</returns>
-        // Get: api/order/pageNumber/pageSize
-        [HttpGet("{pageIndex:int}/{pageSize:int}")]
-        public async Task<IActionResult> Get(int pageIndex, int pageSize)
+        // Get: api/order/GetAllOrders/pageNumber/pageSize
+        [HttpGet("{pageIndex:int}/{pageSize:int}", Name = "GetAllOrders")]
+        public async Task<IActionResult> GetAllOrders(int pageIndex, int pageSize)
         {
             //Get orders include customers and sort by orders placed.
             var data = _context.Orders
