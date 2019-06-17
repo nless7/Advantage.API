@@ -59,7 +59,7 @@ export class PaginationComponent implements OnInit {
 
     pages.push(thisPage);
 
-    console.log(`Starting loop with: total pages: ${totalPages} thisPage: ${thisPage} pagesToShow: ${pagesToShow}`);
+    //console.log(`Starting loop with: total pages: ${totalPages} thisPage: ${thisPage} pagesToShow: ${pagesToShow}`);
 
     for (var i = 0; i < pagesToShow - 1; i++) {
       console.log(`pages[]: ${pages}`);
@@ -67,14 +67,14 @@ export class PaginationComponent implements OnInit {
       if (pages.length < pagesToShow) {
         if (Math.min.apply(null, pages) > 1) {
           pages.push(Math.min.apply(null, pages) - 1);
-          console.log(`pushing: ${pages.push(Math.min.apply(null, pages) - 1)} into array`);
+          //console.log(`pushing: ${pages.push(Math.min.apply(null, pages) - 1)} into array`);
         }
       }
 
       if (pages.length < pagesToShow) {
         if (Math.max.apply(null, pages) < totalPages) {
           pages.push(Math.max.apply(null, pages) + 1);
-          console.log(`pushing: ${pages.push(Math.max.apply(null, pages) + 1)} into array`);
+          //console.log(`pushing: ${pages.push(Math.max.apply(null, pages) + 1)} into array`);
         }
       }
     }

@@ -3,7 +3,6 @@
   <table class="table table-inverse table-hover">
     <thead class="thead-dark">
       <tr>
-        <th>Id</th>
         <th>Customer</th>
         <th>Amount</th>
         <th>Order Placed</th>
@@ -13,7 +12,6 @@
     </thead>
     <tbody>
       <tr *ngFor="let order of orders">
-        <td>{{order.id}}</td>
         <td>{{order.customer.firstName}} {{order.customer.lastName}}</td>
         <td>{{order.total}}</td>
         <td>{{order.placed}}</td>

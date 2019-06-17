@@ -24,7 +24,7 @@ export class OrderService {
       .map(res => res.json());
   }
 
-  getOrdersByState() {
+  getOrdersByPostCode() {
     return this._http.get(`${environment.apiURL }/api/order/bystate/`)
       .map(res => res.json());
   }
