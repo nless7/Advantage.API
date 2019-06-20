@@ -6,7 +6,6 @@ const SAMPLE_SERVERS = [
   {id: '', name: 'dev-mail', isOnline: false},
   {id: '', name: 'prod-web', isOnline: true},
   {id: '', name: 'prod-mail', isOnline: true }
-
 ];
 
 @Component({
