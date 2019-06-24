@@ -16,7 +16,7 @@ export class OrderService {
   /// <returns>The orders.</returns>
   getOrders(pageIndex: number, pageSize: number) {
     return this._http.get(`${environment.apiURL }/api/order/${pageIndex}/${pageSize}`)
-      .map(res => res.json());
+      .map(res => res.json()); 
   }
 
   /// <summary>

@@ -7,22 +7,23 @@ import _ from 'lodash';
   styleUrls: ['./pie-chart.component.css']
 })
 export class PieChartComponent implements OnInit {
+  constructor() { }
+
   @Input() inputData: any; 
   @Input() limit: number; 
 
 
   //pie chart properties
-  pieChartData: number[];
-  pieChartLabels: string[];
+  pieChartData: any[];
+  pieChartLabels: any[];
   pieChartType: string = 'doughnut';
-  colours: any[] = [
+  colors: any[] = [
     {
       backgroundColor: ['#26547c', '#ff6b6b', '#ffd166', '#28a745', '#988d28' ],
       borderColor: '#111'
     }
   ];
 
-  constructor() { }
 
   ngOnInit() {
     this.parseChartData(this.inputData, this.limit);

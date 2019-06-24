@@ -9,18 +9,18 @@ import { OrderService } from 'src/shared/Service/order.service';
 export class SectionSalesComponent implements OnInit {
 
   salesDataByCustomer: any;
-  salesDataByPostcode: any;
+  salesDataByPostCode: any;
 
   constructor(private _orderService: OrderService) { }
 
   ngOnInit() {
-    this.getOrderByPostCode();
     this.getOrderByCustomer();
+    this.getOrderByPostCode();
   }
 
   getOrderByPostCode() {
     this._orderService.getOrdersByPostCode().subscribe(result => {
-      this.salesDataByPostcode = result;
+      this.salesDataByPostCode = result;
     });
   }
 
