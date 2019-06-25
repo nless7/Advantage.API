@@ -1,11 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
 import _ from 'lodash';
+import { THEME_COLOURS } from 'src/shared/theme.colour';
+
+const theme = 'Bright';
 
 @Component({
   selector: 'app-pie-chart',
   templateUrl: './pie-chart.component.html',
   styleUrls: ['./pie-chart.component.css']
 })
+
 export class PieChartComponent implements OnInit {
   constructor() { }
 
@@ -19,7 +23,7 @@ export class PieChartComponent implements OnInit {
   pieChartType: string = 'doughnut';
   colors: any[] = [
     {
-      backgroundColor: ['#26547c', '#ff6b6b', '#ffd166', '#28a745', '#988d28' ],
+      backgroundColor: this.themeColours(theme), //['#26547c', '#ff6b6b', '#ffd166', '#28a745', '#988d28' ],
       borderColor: '#111'
     }
   ];
@@ -32,8 +36,16 @@ export class PieChartComponent implements OnInit {
   //Populate chart with data from the api.
   parseChartData(res: any, limit?: number) {
     const allData = res.slice(0, limit);
+    console.log(allData);
     this.pieChartData = allData.map(x => _.values(x)[1]);
     this.pieChartLabels = allData.map(x => _.values(x)[0]);
+  }
+
+  //Get theme colours by theme name. 
+  themeColours(setName: string): string[] {
+    const c = THEME_COLOURS.slice(0)
+      .find(set => set.name === setName).colourSet;
+    return c;
   }
 
 }

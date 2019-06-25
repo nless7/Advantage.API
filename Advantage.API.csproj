@@ -23,8 +23,10 @@
     <None Remove="angular\src\shared\Models\order.ts" />
     <None Remove="angular\src\shared\Models\server-message.ts" />
     <None Remove="angular\src\shared\Models\server.ts" />
+    <None Remove="angular\src\shared\Models\theme.colour.model.ts" />
     <None Remove="angular\src\shared\Service\order.service.ts" />
     <None Remove="angular\src\shared\Service\server-service.ts" />
+    <None Remove="angular\src\shared\theme.colour.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -59,8 +61,10 @@
     <TypeScriptCompile Include="angular\src\shared\Models\order.ts" />
     <TypeScriptCompile Include="angular\src\shared\Models\server-message.ts" />
     <TypeScriptCompile Include="angular\src\shared\Models\server.ts" />
+    <TypeScriptCompile Include="angular\src\shared\Models\theme.colour.model.ts" />
     <TypeScriptCompile Include="angular\src\shared\Service\order.service.ts" />
     <TypeScriptCompile Include="angular\src\shared\Service\server-service.ts" />
+    <TypeScriptCompile Include="angular\src\shared\theme.colour.ts" />
   </ItemGroup>
 
 </Project>
