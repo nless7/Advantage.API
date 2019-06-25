@@ -36,7 +36,6 @@ export class PieChartComponent implements OnInit {
   //Populate chart with data from the api.
   parseChartData(res: any, limit?: number) {
     const allData = res.slice(0, limit);
-    console.log(allData);
     this.pieChartData = allData.map(x => _.values(x)[1]);
     this.pieChartLabels = allData.map(x => _.values(x)[0]);
   }
