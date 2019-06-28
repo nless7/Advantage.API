@@ -12,7 +12,6 @@ namespace Advantage.API.Models
         [Key]
         public Guid Id { get; set; }
 
-        [Required]
         [Column(TypeName = "nvarchar(50)")]
         public string Name { get; set; }
 

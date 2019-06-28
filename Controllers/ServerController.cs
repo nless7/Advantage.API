@@ -48,39 +48,39 @@ namespace Advantage.API.Controllers
         }
 
         // PUT: api/Server/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutServer([FromRoute] Guid id, [FromBody] Server server)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutServer([FromRoute] Guid id, [FromBody] Server server)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
 
-            if (id != server.Id)
-            {
-                return BadRequest();
-            }
+        //    if (id != server.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(server).State = EntityState.Modified;
+        //    _context.Entry(server).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ServerExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!ServerExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         [HttpPut("Message/{id}", Name ="Message")]
         public async Task<IActionResult> Message(Guid id, [FromBody] ServerMessage serverMessage)
@@ -96,14 +96,14 @@ namespace Advantage.API.Controllers
             if (serverMessage.Payload == "activate")
             {
                 server.IsOnline = true;
+                await _context.SaveChangesAsync();
             }
 
             if (serverMessage.Payload == "deactivate")
             {
                 server.IsOnline = false;
+                await _context.SaveChangesAsync();
             }
-
-            await _context.SaveChangesAsync();
 
             return new NoContentResult();
         }

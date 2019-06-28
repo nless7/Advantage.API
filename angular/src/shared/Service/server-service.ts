@@ -13,8 +13,7 @@ export class ServerService {
 
   constructor(private _http: Http) {
     this.headers = new Headers({
-      'Content-Type': 'application/json',
-      'Accept': 'q=0.8;application/json;q=0.9'
+      'Content-Type': 'application/json'
     });
 
     this.options = new RequestOptions({ headers: this.headers });
@@ -38,7 +37,7 @@ export class ServerService {
   }
 
   handleServerMessage(msg: ServerMessage): Observable<Response> {
-    const url = `${environment.apiURL}/api/server/${msg.id}`;
+    const url = `${environment.apiURL}/api/server/message/${msg.id}`;
     return this._http.put(url, msg, this.options).map(res => res.json());
   }
 

@@ -33,10 +33,15 @@ namespace Advantage.API
         public void ConfigureServices(IServiceCollection services)
         {
             //Add Cors.
-            services.AddCors(options => {
-                options.AddPolicy("CorsPolicy",
-                c => c.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
-            });
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("CorsPolicy",
+                    b => b.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader()
+                          .AllowCredentials());
+            }
+            );
 
             //Access secret connectionstring.
             connectionString = Configuration["secretConnectionString"];
@@ -79,10 +84,12 @@ namespace Advantage.API
                 app.UseHsts();
             }
 
+            app.UseCors("CorsPolicy");
+
             //Seed the database.
             seed.SeedData(NumberOfCustomers, NumberOfOrders);
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseMvc(routes => routes.MapRoute(
                 "default", "api/{controller}/{action}/{id?}"

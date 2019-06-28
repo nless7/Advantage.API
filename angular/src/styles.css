@@ -116,3 +116,6 @@ table tbody td {
   min-width: 54px;
   margin: 2px;
 }
+.btn-centre {
+  margin: 10px auto !important;
+}
